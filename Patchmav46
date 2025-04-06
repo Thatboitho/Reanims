@@ -2107,17 +2107,14 @@ btn("ZelD Animation", function()
 		Part1=swordpart
 	}
 	tinsert(joints,Sword)
-        local sword = function()
-        Sword.C0 = Lerp1(Sword.C0,cf(0,-2,0)*angles(rad(154.35-5.65*sin(TimingSine/25)),0,0),.25)
-        end
 
 	addmode("default", {
 		idle = function()
 			local rY, lY = raycastlegs()
 
 			local Ychg=velYchg()/20
-			sword()
-
+			
+      Sword.C0 = Lerp1(Sword.C0,cf(0,-2,0)*angles(rad(154.35-5.65*sin(TimingSine/25)),0,0),.25)
 			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5+0.1*sin((sine - 1)*1.3),0.05 * sin((sine-0.3)*1.3)),angles(0.5235987755982988+0.08726646259971647*sin(sine*1),-1.4835298641951802+0.10471975511965978*sin(sine*1.3),0.5235987755982988)),deltaTime) 
 			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5+0.1*sin((sine - 1)*1.3),0.05 * sin((sine-0.3)*1.3)),angles(0.5235987755982988+0.08726646259971647*sin(sine*1),1.4835298641951802-0.10471975511965978*sin(sine*1.3),-0.5235987755982988)),deltaTime) 
 			LeftHip.C0=Lerp(LeftHip.C0,cfMul(cf(-1,-1.09-0.1*sin(sine*1.3)+lY-Ychg,lY*-0.5),angles(-0.026179938779914945*sin(sine*1.3),-1.3962634015954636,0)),deltaTime) 
@@ -2132,8 +2129,8 @@ btn("ZelD Animation", function()
 			local rY, lY = raycastlegs()
 
 			local Ychg=velYchg()/20
-			sword()
-
+			
+      Sword.C0 = Lerp1(Sword.C0,cf(0,-2,0)*angles(rad(154.35-5.65*sin(TimingSine/25)),0,0),.25)
 			LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(-0.7853981633974483*sin((sine+0.07)*8)*Vfw,-1.5707963267948966+0.5235987755982988*sin((sine+0.15)*8),0)),deltaTime) 
 			RightShoulder.C0=Lerp(RightShoulder.C0,cfMul(cf(1,0.5,0),angles(0.7853981633974483*sin((sine+0.07)*8)*Vfw,1.5707963267948966+0.5235987755982988*sin((sine+0.15)*8),0)),deltaTime) 
 			RightHip.C0=Lerp(RightHip.C0,cfMul(cf(1,-1+0.3*sin((sine - 0.15)*8)+rY-Ychg,rY*-0.5),angles(1.5707963267948966-0.9599310885968813*sin(sine*8)*Vfw,1.5707963267948966-0.7853981633974483*sin(sine*8)*Vrt,-1.5707963267948966)),deltaTime) 
@@ -2145,8 +2142,8 @@ btn("ZelD Animation", function()
 		jump = function()
 			velYchg()
 			local Vfw, Vrt = velbycfrvec()
-			sword()
-
+			
+      Sword.C0 = Lerp1(Sword.C0,cf(0,-2,0)*angles(rad(154.35-5.65*sin(TimingSine/25)),0,0),.25)
 			RootJoint.C0 = Lerp(RootJoint.C0,cfMul(cf_0,angles(-1.4835298641951802 + Vfw * 0.1, Vrt * -0.05, -3.141592653589793)),deltaTime) 
 			RightShoulder.C0 = Lerp(RightShoulder.C0,cfMul(cf(1, 0.5, 0),angles(4.014257279586958 - 0.08726646259971647 * sin((sine + 0.5) * 4), 1.7453292519943295 + 0.08726646259971647 * sin((sine + 0.25) * 4), -1.5707963267948966)),deltaTime) 
 			LeftHip.C0 = Lerp(LeftHip.C0,cfMul(cf(-1, -1, 0),angles(1.5707963267948966 - 0.08726646259971647 * sin((sine + 0.5) * 4), -1.6580627893946132 + 0.06981317007977318 * sin((sine + 0.25) * 4), 1.5707963267948966)),deltaTime) 
@@ -2158,8 +2155,8 @@ btn("ZelD Animation", function()
 		fall = function()
 			velYchg()
 			local Vfw, Vrt = velbycfrvec()
-			sword()
 
+      Sword.C0 = Lerp1(Sword.C0,cf(0,-2,0)*angles(rad(154.35-5.65*sin(TimingSine/25)),0,0),.25)
 			RootJoint.C0 = Lerp(RootJoint.C0,cfMul(cf_0,angles(-1.6580627893946132 + Vfw * 0.1, Vrt * -0.05, -3.141592653589793)),deltaTime) 
 			RightShoulder.C0 = Lerp(RightShoulder.C0,cfMul(cf(1, 0.5, 0),angles(4.014257279586958 - 0.08726646259971647 * sin((sine + 0.5) * 4), 1.7453292519943295 + 0.08726646259971647 * sin((sine + 0.25) * 4), -1.5707963267948966)),deltaTime) 
 			LeftHip.C0 = Lerp(LeftHip.C0,cfMul(cf(-1, -1, 0),angles(1.5707963267948966 - 0.08726646259971647 * sin((sine + 0.5) * 4), -1.6580627893946132 + 0.06981317007977318 * sin((sine + 0.25) * 4), 1.5707963267948966)),deltaTime) 
